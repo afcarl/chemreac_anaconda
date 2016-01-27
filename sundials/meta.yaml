@@ -8,6 +8,8 @@ source:
   md5: 3deeb0ede9f514184c6bd83ecab77d95
 
 requirements:
+  run:
+    - lapack
   build:
     - cmake
     - lapack
