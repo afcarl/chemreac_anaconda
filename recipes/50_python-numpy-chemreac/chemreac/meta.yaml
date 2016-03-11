@@ -1,0 +1,55 @@
+package:
+  name: chemreac
+  version: 0.5.0
+  # the version being overridden by the __conda_version__.txt file
+  # http://conda.pydata.org/docs/build.html#post-build-version
+
+source:
+  fn: chemreac-0.5.0.tar.gz
+  url: https://pypi.python.org/packages/source/c/chemreac/chemreac-0.5.0.tar.gz#md5=b36ebd48b1eb7bb9c5f7a51d923ebf32
+  md5: b36ebd48b1eb7bb9c5f7a51d923ebf32
+
+requirements:
+  build:
+    - python
+    - sundials
+    - cython
+    - numpy
+    - pycompilation
+    - pycodeexport
+    - mako
+    - block_diag_ilu
+    - quantities
+    - chempy
+    - openblas
+  run:
+    - python
+    - numpy
+    - scipy
+    - sundials
+    - matplotlib
+    - sympy
+    - quantities
+    - chempy
+    - block_diag_ilu
+    - openblas
+
+build:
+  string: np{{np}}py{{py}}_o1
+  features:
+    - openblas
+
+test:
+  requires:
+    - pytest
+    - periodictable
+    - argh
+  imports:
+    - chemreac
+  commands:
+    - MPLBACKEND=Agg py.test --pyargs chemreac
+
+about:
+  home: https://github.com/chemreac/chemreac
+  license: BSD License
+  summary: Python package for modelling chemical kinetics with diffusion and drift

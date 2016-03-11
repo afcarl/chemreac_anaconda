@@ -1,6 +1,6 @@
 Conda recipes for chemreac
 ==========================
-See conda.anaconda.org/chemreac
+See https://conda.anaconda.org/chemreac
 
 How to build the recipes
 ------------------------

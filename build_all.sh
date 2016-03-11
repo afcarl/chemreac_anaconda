@@ -6,16 +6,17 @@
 #
 
 if [ $# -eq 0 ]; then
-    PKGS="recipes/10_non-python/*/ recipes/20_python/*/"
+    PKGS="recipes/*/*/"
 else
     PKGS="$@"
 fi
-
+echo $PKGS
+exit 0
 for PKG in $PKGS; do
     if [[ $PKG == recipes/10_* ]] || [[ $PKG == recipes/20_* ]]; then
         ./run_in_container.sh ./recipes/ ./output/ "conda build ./$PKG"
 
-    elif [[ $PKG == recipes/30_* ]]; then
+    elif [[ $PKG == recipes/30_* ]] || [[ $PKG == recipes/50_* ]]; then
         for PY in 27 34; do
             ./run_in_container.sh ./recipes/ ./output/ "conda build ./$PKG" py$PY "-e CONDA_PY=$PY -e CONDA_NPY=110"
         done
