@@ -1,12 +1,13 @@
 package:
-  name: block_diag_ilu
-  version: 0.2.0
+    name: block_diag_ilu
+    version: 0.2.1
 
 source:
-  fn: block_diag_ilu-0.2.0.tar.gz
-  url: https://pypi.python.org/packages/source/b/block_diag_ilu/block_diag_ilu-0.2.0.tar.gz#md5=c51e59508a09e55fa2598ed41db086e7
-  md5: c51e59508a09e55fa2598ed41db086e7
+    fn: block_diag_ilu-0.2.1.tar.gz
+    url: https://pypi.python.org/packages/source/b/block_diag_ilu/block_diag_ilu-0.2.1.tar.gz#md5=c8ab75427ced5499be251cda0a701f89
+    md5: c8ab75427ced5499be251cda0a701f89
 
+# You may want to exchange openblas with e.g. lapack
 build:
   string: np{{np}}py{{py}}_o0
   features:
