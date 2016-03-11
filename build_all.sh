@@ -12,10 +12,17 @@ else
 fi
 
 for PKG in $PKGS; do
-    if [[ $PKG == recipes/20_python* ]]; then
-        ./run_in_container.sh ./recipes/ ./output/ "conda build ./input/${PKG##recipes/}" py27 -e CONDA_PY=27
-        ./run_in_container.sh ./recipes/ ./output/ "conda build ./input/${PKG##recipes/}" py34 -e CONDA_PY=34
+    if [[ $PKG == recipes/10_* ]] || [[ $PKG == recipes/20_* ]]; then
+        ./run_in_container.sh ./recipes/ ./output/ "conda build ./$PKG"
+
+    elif [[ $PKG == recipes/30_* ]]; then
+        for PY in 27 34; do
+            ./run_in_container.sh ./recipes/ ./output/ "conda build ./$PKG" py$PY "-e CONDA_PY=$PY -e CONDA_NPY=110"
+        done
+    elif [[ $PKG == recipes/40_* ]]; then
+        ./run_in_container.sh ./recipes/ ./output/ "conda build ./$PKG" py$PY "-e CONDA_PY=$PY"
     else
-        ./run_in_container.sh ./recipes/ ./output/ "conda build ./input/${PKG##recipes/}"
+        echo "Unkown recipe folder"
+        exit 1
     fi
 done
