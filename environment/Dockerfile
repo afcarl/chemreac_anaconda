@@ -10,13 +10,13 @@ RUN locale-gen en_US.UTF-8 && \
     apt-get --assume-yes --no-install-recommends install \
         wget bzip2 ca-certificates libglib2.0-0 libxext6 libsm6 libxrender1 \
         build-essential gfortran binutils-dev && \
-    wget --quiet https://repo.continuum.io/miniconda/Miniconda2-3.19.0-Linux-x86_64.sh && \
-    /bin/bash /Miniconda2-3.19.0-Linux-x86_64.sh -b -p /opt/conda && \
-    rm Miniconda2-3.19.0-Linux-x86_64.sh && \
-    conda install --yes conda==4.0.2 conda-build
+    wget --quiet https://repo.continuum.io/miniconda/Miniconda2-4.0.5-Linux-x86_64.sh && \
+    /bin/bash /Miniconda2-4.0.5-Linux-x86_64.sh -b -p /opt/conda && \
+    rm Miniconda2-4.0.5-Linux-x86_64.sh && \
+    conda install --yes conda conda-build
 RUN \
     echo "always_yes: True" >/root/.condarc && \
     mkdir /root/conda-envs/ && \
-    conda create --name py27_ python==2.7.11 && \
-    conda create --name py34_ python==3.4.4 && \
-    conda create --name py35_ python==3.5.1
+    conda create --name pyth2.7_nump1.10_ python==2.7.11 numpy=1.10 scipy matplotlib && \
+    conda create --name pyth3.4_nump1.10_ python==3.4.4 numpy=1.10 scipy matplotlib && \
+    conda create --name pyth3.5_nump1.10_ python==3.5.1 numpy=1.10 scipy matplotlib
