@@ -11,6 +11,10 @@ else
     PKGS="$@"
 fi
 for PKG in $PKGS; do
+    echo $PKG
+    if [[ $PKG == recipes/_* ]]; then
+        continue
+    fi
     if [[ $PKG == recipes/*/_* ]]; then
         continue
     fi
