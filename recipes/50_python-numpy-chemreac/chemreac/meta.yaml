@@ -21,7 +21,7 @@ requirements:
     - block_diag_ilu
     - quantities
     - chempy
-    - openblas
+    - lapack
   run:
     - python
     - numpy
@@ -32,12 +32,7 @@ requirements:
     - quantities
     - chempy
     - block_diag_ilu
-    - openblas
-
-build:
-  string: np{{np}}py{{py}}_o1
-  features:
-    - openblas
+    - lapack
 
 test:
   requires:
