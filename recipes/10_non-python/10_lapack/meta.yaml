@@ -13,10 +13,10 @@ build:
 requirements:
   build:
     - cmake
-    - gcc
+#    - gcc
 
-  run:
-    - libgcc
+#  run:
+#    - libgcc
 
 about:
   home: http://www.netlib.org/lapack
