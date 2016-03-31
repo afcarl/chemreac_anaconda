@@ -1,25 +1,24 @@
 package:
-    name: pycvodes
-    version: 0.4.0
+  name: pycvodes
+  version: 0.4.1
 
 source:
-    fn: pycvodes-0.4.0.tar.gz
-    url: https://pypi.python.org/packages/source/p/pycvodes/pycvodes-0.4.0.tar.gz#md5=3b7c665070a2fc9c463256f86d530959
-    md5: 3b7c665070a2fc9c463256f86d530959
+  fn: pycvodes-0.4.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pycvodes/pycvodes-0.4.1.tar.gz#md5=17edc03854ecdfd092972b32787d4897
+  md5: 17edc03854ecdfd092972b32787d4897
 
 build:
-    number: 0
+  number: 0
 
 requirements:
-    build:
-        - python
-        - numpy
-        - sundials
-        - cython
-    run:
-        - python
-        - numpy
-        - sundials
+  build:
+   - python
+   - numpy
+   - sundials
+  run:
+   - python
+   - numpy
+   - sundials
 
 test:
     imports:

@@ -7,17 +7,13 @@ source:
   url: http://pkgs.fedoraproject.org/repo/pkgs/sundials/sundials-2.6.2.tar.gz/3deeb0ede9f514184c6bd83ecab77d95/sundials-2.6.2.tar.gz
   md5: 3deeb0ede9f514184c6bd83ecab77d95
 
-build:
-  number: 2
-  features:
-    - openblas
 
 requirements:
   run:
-    - openblas
+    - lapack
   build:
     - cmake
-    - openblas
+    - lapack
 
 test:
   files:

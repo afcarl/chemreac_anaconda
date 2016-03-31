@@ -7,22 +7,16 @@ source:
     url: https://pypi.python.org/packages/source/b/block_diag_ilu/block_diag_ilu-0.2.1.tar.gz#md5=c8ab75427ced5499be251cda0a701f89
     md5: c8ab75427ced5499be251cda0a701f89
 
-# You may want to exchange openblas with e.g. lapack
-build:
-  string: np{{np}}py{{py}}_o0
-  features:
-    - openblas
-
 requirements:
   build:
     - python
     - numpy
     - cython
-    - openblas
+    - lapack
   run:
     - python
     - numpy
-    - openblas
+    - lapack
 
 
 test:

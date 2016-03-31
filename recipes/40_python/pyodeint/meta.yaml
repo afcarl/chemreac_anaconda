@@ -1,27 +1,29 @@
 package:
-    name: pyodeint
-    version: 0.1.0.git
+  name: pyodeint
+  version: 0.6.0
 
 source:
-  git_rev: v0.1.0
-  git_url: git://github.com/bjodah/pyodeint.git
+  fn: pyodeint-0.6.0.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyodeint/pyodeint-0.6.0.tar.gz#md5=99048d109f16b9020d95cf1eaf87a0e0
+  md5: 99048d109f16b9020d95cf1eaf87a0e0
 
 build:
-    number: 0
+  number: 0
 
 requirements:
-    build:
-        - python
-        - numpy
-        - boost
-        - cython
-    run:
-        - numpy
-        - python
+  build:
+    - python
+    - numpy
+    - boost
+  run:
+    - numpy
+    - python
 
 test:
-    imports:
-        - pyodeint
+  imports:
+    - pyodeint
+  requires:
+    - pytest
 
 about:
     home: https://github.com/bjodah/pyodeint
