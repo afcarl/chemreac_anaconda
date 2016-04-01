@@ -8,26 +8,27 @@ source:
   md5: 17edc03854ecdfd092972b32787d4897
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
-   - python
-   - numpy
-   - sundials
+    # - gcc
+    - python
+    - numpy
+    - sundials
   run:
-   - python
-   - numpy
-   - sundials
-
+    - python
+    - numpy
+    - sundials
+    # - libgcc
 test:
-    imports:
-        - pycvodes
+  imports:
+    - pycvodes
     # requires:
     #     - pytest
     # commands:
     #     - py.test --pyargs pycvodes  # https://github.com/conda/conda/issues/2075, https://github.com/pytest-dev/pytest/issues/1445
 
 about:
-    home: https://github.com/bjodah/pycvodes
-    license: BSD
+  home: https://github.com/bjodah/pycvodes
+  license: BSD

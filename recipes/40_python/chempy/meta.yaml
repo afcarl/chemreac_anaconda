@@ -1,44 +1,44 @@
 package:
-    name: chempy
-    version: 0.3.3
+  name: chempy
+  version: 0.3.3
 
 source:
-    fn: chempy-0.3.3.tar.gz
-    url: https://pypi.python.org/packages/source/c/chempy/chempy-0.3.3.tar.gz#md5=94ba7472e40391ca3ae6692f2264a15f
-    md5: 94ba7472e40391ca3ae6692f2264a15f
+  fn: chempy-0.3.3.tar.gz
+  url: https://pypi.python.org/packages/source/c/chempy/chempy-0.3.3.tar.gz#md5=94ba7472e40391ca3ae6692f2264a15f
+  md5: 94ba7472e40391ca3ae6692f2264a15f
 
 build:
-    number: 0
+  number: 0
 
 requirements:
-    build:
-        - python
-        - numpy
-        - sympy
-        - scipy
-        - matplotlib
-        - quantities
-        - pyparsing
-        - pyneqsys
-        - pyodesys
+  build:
+    - python
+    - numpy
+    - sympy
+    - scipy
+    - matplotlib
+    - quantities
+    - pyparsing
+    - pyneqsys
+    - pyodesys
 #        - dot2tex
-    run:
-        - python
-        - numpy
-        - sympy
-        - scipy
-        - matplotlib
-        - quantities
-        - pyparsing
-        - pyneqsys
-        - pyodesys
+  run:
+    - python
+    - numpy
+    - sympy
+    - scipy
+    - matplotlib
+    - quantities
+    - pyparsing
+    - pyneqsys
+    - pyodesys
 #        - dot2tex
 
 test:
-    imports:
-        - chempy
+  imports:
+    - chempy
 
 about:
-    home: https://github.com/bjodah/chempy
-    license: BSD
-    summary: Python package useful for (physical) chemistry
+  home: https://github.com/bjodah/chempy
+  license: BSD
+  summary: Python package useful for (physical) chemistry

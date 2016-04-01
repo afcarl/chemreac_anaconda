@@ -9,8 +9,12 @@ source:
   url: https://pypi.python.org/packages/source/c/chemreac/chemreac-0.5.0.tar.gz#md5=b36ebd48b1eb7bb9c5f7a51d923ebf32
   md5: b36ebd48b1eb7bb9c5f7a51d923ebf32
 
+build:
+  number: 1
+
 requirements:
   build:
+    # - gcc
     - python
     - sundials
     - cython
@@ -23,6 +27,7 @@ requirements:
     - chempy
     - lapack
   run:
+    # - libgcc
     - python
     - numpy
     - scipy
