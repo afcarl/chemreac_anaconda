@@ -4,8 +4,9 @@ BASE_PATH=$(unset CDPATH && cd "$(dirname $0)" && echo $PWD)
 
 if [[ ! -d opt ]]; then
     mkdir opt
+    chmod 777 opt
     cat <<EOF | docker run --rm -v $BASE_PATH/opt:/new_opt -i continuumio/conda_builder_linux:latest bash -x
-cp -r /opt/miniconda /new_opt/
+cp -r /opt/* /new_opt/
 EOF
 fi
 
