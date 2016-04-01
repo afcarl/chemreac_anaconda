@@ -22,6 +22,9 @@ requirements:
     - lapack
 
 test:
+  requires:
+    - lapack
+
   files:
     - cvRoberts_dns.c
 
