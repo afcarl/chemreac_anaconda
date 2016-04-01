@@ -13,7 +13,15 @@ If ``start_cpp98.sh`` is in your ``$PATH`` (see ``conda_builder_linux`` above):
 
    $ git clone git://github.com/chemreac/chemreac_anaconda.git
    $ cd chemreac_anaconda
-$ start_cpp98.sh -v $(pwd):/home/dev/chemreac_anaconda -v $(pwd)/linux-64:/opt/miniconda/conda-bld/linux-64 ./chemreac_anaconda/entrypoint.sh
+   $ start_cpp98.sh ./orchestrate_all.sh
 
 
-And that is it. You need to modify ``clone_build_push.sh`` to your needs (server addresses etc.)
+here is an example how I build lapack on my workstation:
+
+::
+
+   $ PATH=~/vc/docker-images/conda_builder_linux:$PATH ./orchestrate_all.sh recipes/10_non-python/10_lapack/
+
+
+And that is it. Built packages are then under ``./opt/miniconda/conda-bld/linux-64`` which may then be
+uploaded manually to anaconda.org using the anaconda tool.
