@@ -8,14 +8,16 @@ source:
   md5: 99048d109f16b9020d95cf1eaf87a0e0
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
+    # - gcc
     - python
     - numpy
     - boost
   run:
+    # - libgcc
     - numpy
     - python
 

@@ -1,21 +1,19 @@
 Conda recipes for chemreac
 ==========================
-See https://conda.anaconda.org/chemreac
+This is a build script for building conda packages for `chemreac <https://github.com/chemreac/chemreac>`_.
+It uses the `conda_builder_linux image provided by ContinuumIO <https://github.com/ContinuumIO/docker-images/tree/master/conda_builder_linux>`_.
+
+Published packages: https://conda.anaconda.org/chemreac
 
 How to build the recipes
 ------------------------
+If ``start_cpp98.sh`` is in your ``$PATH`` (see ``conda_builder_linux`` above):
 
 ::
 
-   $ ./build_all.sh
+   $ git clone git://github.com/chemreac/chemreac_anaconda.git
+   $ cd chemreac_anaconda
+   $ start_cpp98.sh -v $(pwd):/home/dev/chemreac_anaconda ./chemreac_anaconda/build_push.sh
 
-And that's it, the packages are then uploaded manually from ``./opt/conda-bld/linux-64`` using ``anaconda upload``.
-Note that ~10GB of free diskspace is needed. (a new dir ./opt will be created)
 
-Building the dockerimage
-------------------------
-
-::
-
-   $ docker build -t chemreac/chemreac_anaconda environment/
-
+And that is it. You need to modify ``clone_build_push.sh`` to your needs (server addresses etc.)
