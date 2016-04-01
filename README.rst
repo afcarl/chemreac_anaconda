@@ -13,7 +13,7 @@ If ``start_cpp98.sh`` is in your ``$PATH`` (see ``conda_builder_linux`` above):
 
    $ git clone git://github.com/chemreac/chemreac_anaconda.git
    $ cd chemreac_anaconda
-   $ start_cpp98.sh -v $(pwd):/home/dev/chemreac_anaconda ./chemreac_anaconda/build_push.sh
+$ start_cpp98.sh -v $(pwd):/home/dev/chemreac_anaconda -v $(pwd)/linux-64:/opt/miniconda/conda-bld/linux-64 ./chemreac_anaconda/entrypoint.sh
 
 
 And that is it. You need to modify ``clone_build_push.sh`` to your needs (server addresses etc.)
