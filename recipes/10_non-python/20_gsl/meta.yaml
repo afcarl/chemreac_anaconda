@@ -16,7 +16,7 @@ requirements:
     - lapack
 
   run:
-    # - libgcc
+    - libgcc
     - lapack
 
 about:

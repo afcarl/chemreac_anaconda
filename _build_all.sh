@@ -22,11 +22,11 @@ for PKG in $PKGS; do
         conda build ./$PKG
     elif [[ $PKG == recipes/30_* ]] || [[ $PKG == recipes/50_* ]]; then
         for PY in 2.7 3.4 3.5; do
-            for NPY in 1.10; do
+            for NPY in 1.11; do
                 conda build --python $PY --numpy $NPY ./$PKG
             done
         done
-    elif [[ $PKG == recipes/40_* ]]; then
+    elif [[ $PKG == recipes/4?_* ]]; then
         NPY=1.10
         for PY in 2.7 3.4 3.5; do
             conda build --python $PY ./$PKG

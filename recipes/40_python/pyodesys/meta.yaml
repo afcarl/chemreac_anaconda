@@ -1,0 +1,34 @@
+package:
+  name: pyodesys
+  version: 0.5.1
+
+source:
+  fn: pyodesys-0.5.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyodesys/pyodesys-0.5.1.tar.gz#md5=00c30f5e507c3b514055ee86087152dc
+  md5: 00c30f5e507c3b514055ee86087152dc
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+  run:
+    - python
+    - numpy
+    - sympy
+    - scipy
+
+test:
+  imports:
+    - pyodesys
+  requires:
+    - pytest
+    - scipy
+    - pyodeint
+    - pygslodeiv2
+    - pycvodes
+
+about:
+  home: https://github.com/bjodah/pyodesys
+  license: BSD

@@ -1,33 +1,28 @@
 package:
   name: pycvodes
-  version: 0.4.1
+  version: 0.4.2
 
 source:
-  fn: pycvodes-0.4.1.tar.gz
-  url: https://pypi.python.org/packages/source/p/pycvodes/pycvodes-0.4.1.tar.gz#md5=17edc03854ecdfd092972b32787d4897
-  md5: 17edc03854ecdfd092972b32787d4897
+  fn: pycvodes-0.4.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/pycvodes/pycvodes-0.4.2.tar.gz#md5=925f3fd6e9ab65ea258ff0277b8df1ca
+  md5: 925f3fd6e9ab65ea258ff0277b8df1ca
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
-    # - gcc
-    - python
-    - numpy
-    - sundials
+   - python
+   - numpy
+   - sundials
   run:
-    - python
-    - numpy
-    - sundials
-    # - libgcc
+   - python
+   - numpy
+   - sundials
+
 test:
   imports:
     - pycvodes
-    # requires:
-    #     - pytest
-    # commands:
-    #     - py.test --pyargs pycvodes  # https://github.com/conda/conda/issues/2075, https://github.com/pytest-dev/pytest/issues/1445
 
 about:
   home: https://github.com/bjodah/pycvodes

@@ -1,0 +1,34 @@
+package:
+  name: pyneqsys
+  version: 0.4.1
+
+source:
+  fn: pyneqsys-0.4.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyneqsys/pyneqsys-0.4.1.tar.gz#md5=368f322adb3a59c17a2a2bf87fdcb905
+  md5: 368f322adb3a59c17a2a2bf87fdcb905
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - numpy
+  run:
+    - python
+    - numpy
+    - sympy
+    - scipy
+    - pyodesys
+
+test:
+  imports:
+    - pyneqsys
+  requires:
+    - nose
+  commands:
+    - nosetests pyneqsys
+
+about:
+  home: https://github.com/bjodah/pyneqsys
+  license: BSD

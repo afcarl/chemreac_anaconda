@@ -1,24 +1,22 @@
 package:
-    name: block_diag_ilu
-    version: 0.2.1
+  name: block_diag_ilu
+  version: 0.2.2
 
 source:
-    fn: block_diag_ilu-0.2.1.tar.gz
-    url: https://pypi.python.org/packages/source/b/block_diag_ilu/block_diag_ilu-0.2.1.tar.gz#md5=c8ab75427ced5499be251cda0a701f89
-    md5: c8ab75427ced5499be251cda0a701f89
+  fn: block_diag_ilu-0.2.2.tar.gz
+  url: https://pypi.python.org/packages/source/b/block_diag_ilu/block_diag_ilu-0.2.2.tar.gz#md5=e3cafd56eacc7a2a924abd417362a024
+  md5: e3cafd56eacc7a2a924abd417362a024
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
-    # - gcc
     - python
     - numpy
     - cython
     - lapack
   run:
-    # - libgcc
     - python
     - numpy
     - lapack

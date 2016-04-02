@@ -1,0 +1,32 @@
+package:
+  name: pyodeint
+  version: 0.6.1
+
+source:
+  fn: pyodeint-0.6.1.tar.gz
+  url: https://pypi.python.org/packages/source/p/pyodeint/pyodeint-0.6.1.tar.gz#md5=0e6f000ea7b434de01f8bf502bb8f684
+  md5: 0e6f000ea7b434de01f8bf502bb8f684
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - numpy
+    - boost ==1.57.0
+  run:
+    - numpy
+    - python
+
+test:
+  imports:
+    - pyodeint
+  requires:
+    - pytest
+  commands:
+    - python -m pytest --pyargs pyodeint
+
+about:
+  home: https://github.com/bjodah/pyodeint
+  license: Simplified BSD license

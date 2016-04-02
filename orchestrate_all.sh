@@ -10,4 +10,4 @@ cp -r /opt/* /new_opt/
 EOF
 fi
 
-start_cpp98.sh --rm -v /home/bjorn/vc/chemreac_anaconda:/home/dev/chemreac_anaconda -v $BASE_PATH/opt:/opt ./chemreac_anaconda/entrypoint.sh $@
+start_cpp98.sh --rm -v /home/bjorn/vc/chemreac_anaconda:/home/dev/chemreac_anaconda -v $BASE_PATH/opt:/opt ./chemreac_anaconda/_entrypoint.sh $@

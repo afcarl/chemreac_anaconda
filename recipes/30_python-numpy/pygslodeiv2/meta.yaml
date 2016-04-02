@@ -1,0 +1,31 @@
+package:
+  name: pygslodeiv2
+  version: 0.5.2
+
+source:
+  fn: pygslodeiv2-0.5.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/pygslodeiv2/pygslodeiv2-0.5.2.tar.gz#md5=6a141b1993396372063c54262c5a3a73
+  md5: 6a141b1993396372063c54262c5a3a73
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - numpy
+    - gsl
+  run:
+    - numpy
+    - python
+    - gsl
+
+test:
+  imports:
+    - pygslodeiv2
+  requires:
+    - pytest
+
+about:
+  home: https://github.com/bjodah/pygslodeiv2
+  license: GNU GPL v3

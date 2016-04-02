@@ -1,0 +1,44 @@
+package:
+  name: chempy
+  version: 0.3.5
+
+source:
+  fn: chempy-0.3.5.tar.gz
+  url: https://pypi.python.org/packages/source/c/chempy/chempy-0.3.5.tar.gz#md5=a6d697fae7cd370a917c10ede42d8c62
+  md5: a6d697fae7cd370a917c10ede42d8c62
+
+build:
+  number: 0
+
+requirements:
+  build:
+    - python
+    - numpy
+    - sympy
+    - scipy
+    - matplotlib
+    - quantities
+    - pyparsing
+    - pyneqsys
+    - pyodesys
+#    - dot2tex
+  run:
+    - python
+    - numpy
+    - sympy
+    - scipy
+    - matplotlib
+    - quantities
+    - pyparsing
+    - pyneqsys
+    - pyodesys
+#    - dot2tex
+
+test:
+  imports:
+    - chempy
+
+about:
+  home: https://github.com/bjodah/chempy
+  license: BSD
+  summary: Python package useful for (physical) chemistry

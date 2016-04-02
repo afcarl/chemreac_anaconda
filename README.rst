@@ -30,8 +30,14 @@ now when I try to build e.g. sundials
 
 it will use the conda package built in the previous step.
 
-And that is it. Built packages are then found under ``./opt/miniconda/conda-bld/linux-64`` which may then be
-uploaded manually to anaconda.org using the anaconda tool.
-
+And that is it. Built packages are then found under ``./opt/miniconda/conda-bld/linux-64``.
 Note that the ``./opt`` dir may grow quite large over time, and you will need to remove it if there has
 been a new docker image published by ContinuumIO in between your builds.
+
+
+The built packages are then uploaded manually to anaconda.org using the ``anaconda`` tool.
+To test the anaconda.org/chemreac repo another script is provided:
+
+::
+
+   $ ./test_anaconda_chemreac.sh

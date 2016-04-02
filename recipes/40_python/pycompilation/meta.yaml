@@ -1,0 +1,39 @@
+package:
+  name: pycompilation
+  version: "0.4.2"
+
+source:
+  fn: pycompilation-0.4.2.tar.gz
+  url: https://pypi.python.org/packages/source/p/pycompilation/pycompilation-0.4.2.tar.gz#md5=aa3a6466687111302ec415de815e2c44
+  md5: aa3a6466687111302ec415de815e2c44
+
+# build:
+  #preserve_egg_dir: True
+  #entry_points:
+    # Put any entry points (scripts to be generated automatically) here. The
+    # syntax is module:function.  For example
+    #
+    # - pycompilation = pycompilation:main
+    #
+    # Would create an entry point called pycompilation that calls pycompilation.main()
+
+
+  # If this is a new build for the same version, increment the build
+  # number. If you do not include this key, it defaults to 0.
+  # number: 1
+
+requirements:
+  build:
+    - python
+
+  run:
+    - python
+
+about:
+  home: https://github.com/bjodah/pycompilation
+  license:  BSD License
+  summary: 'Package for compilation (meta programming).'
+
+# See
+# http://docs.continuum.io/conda/build.html for
+# more information about meta.yaml
