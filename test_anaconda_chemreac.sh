@@ -1,4 +1,5 @@
 #!/bin/bash
+BASE_PATH=$(unset CDPATH && cd "$(dirname $0)" && echo $PWD)
 DOCKERIMAGE=continuumio/miniconda
 
 if [[ ! -d opt_test ]]; then
@@ -9,5 +10,5 @@ cp -r /opt/* /new_opt/
 EOF
 fi
 
-docker run --rm -v $(pwd):/chemreac_anaconda -it $DOCKERIMAGE /chemreac_anaconda/_run_tests.sh
+docker run --rm -v $(pwd):/chemreac_anaconda -v $BASE_PATH/opt_test:/opt -it $DOCKERIMAGE /chemreac_anaconda/_run_tests.sh
 
