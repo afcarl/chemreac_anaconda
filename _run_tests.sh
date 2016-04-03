@@ -6,4 +6,4 @@ conda install --yes -c chemreac chemreac pytest
 conda remove --yes libgfortran
 conda install --yes libgcc --force
 
-MPLBACKEND=Agg py.test --pyargs chemreac
+MPLBACKEND=Agg py.test --pyargs chemreac -k 'not test_radyields2pdf_table'
