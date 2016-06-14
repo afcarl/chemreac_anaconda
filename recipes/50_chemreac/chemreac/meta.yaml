@@ -1,20 +1,18 @@
 package:
   name: chemreac
-  version: 0.6.0.git
+  version: 0.6.1
   # the version being overridden by the __conda_version__.txt file
   # http://conda.pydata.org/docs/build.html#post-build-version
 
 source:
-  path: chemreac-0.6.0.git/
-
-build:
-  number: 1
+  fn: chemreac-0.6.1.tar.gz
+  url: https://github.com/chemreac/chemreac/releases/download/v0.6.1/chemreac-0.6.1.tar.gz
+  md5: 0fbd5bf4342076fb7a11657353d03e9c
 
 requirements:
   build:
     - python
     - sundials
-    - cython
     - numpy
     - pycompilation
     - pycodeexport
@@ -24,10 +22,9 @@ requirements:
     - chempy
     - lapack
   run:
-    - libgcc
     - python
     - numpy
-    - scipy ==0.16
+    - scipy
     - sundials
     - matplotlib
     - sympy
@@ -35,16 +32,20 @@ requirements:
     - chempy
     - block_diag_ilu
     - lapack
+    - libgcc
 
-# test:
-#   requires:
-#     - pytest
-#     - periodictable
-#     - argh
-#   imports:
-#     - chemreac
-#   commands:
-#     - MPLBACKEND=Agg py.test --pyargs chemreac
+build:
+  number: 0
+
+test:
+  requires:
+    - pytest
+    - periodictable
+    - argh
+  imports:
+    - chemreac
+  commands:
+    - MPLBACKEND=Agg py.test --pyargs chemreac
 
 about:
   home: https://github.com/chemreac/chemreac

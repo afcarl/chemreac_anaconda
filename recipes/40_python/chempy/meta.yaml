@@ -1,11 +1,11 @@
 package:
   name: chempy
-  version: 0.3.3
+  version: 0.4.1
 
 source:
-  fn: chempy-0.3.3.tar.gz
-  url: https://pypi.python.org/packages/source/c/chempy/chempy-0.3.3.tar.gz#md5=94ba7472e40391ca3ae6692f2264a15f
-  md5: 94ba7472e40391ca3ae6692f2264a15f
+  fn: chempy-0.4.1.tar.gz
+  url: https://github.com/bjodah/chempy/releases/download/v0.4.1/chempy-0.4.1.tar.gz
+  md5: 6537920c8424e2174060206d6e881552
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - pyparsing
     - pyneqsys
     - pyodesys
-#        - dot2tex
+#    - dot2tex
   run:
     - python
     - numpy
@@ -32,7 +32,7 @@ requirements:
     - pyparsing
     - pyneqsys
     - pyodesys
-#        - dot2tex
+#    - dot2tex
 
 test:
   imports:

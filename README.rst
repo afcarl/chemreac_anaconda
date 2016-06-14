@@ -13,7 +13,7 @@ If ``start_cpp98.sh`` is in your ``$PATH`` (see ``conda_builder_linux`` above):
 
    $ git clone git://github.com/chemreac/chemreac_anaconda.git
    $ cd chemreac_anaconda
-   $ start_cpp98.sh ./orchestrate_all.sh
+   $ ./orchestrate_all.sh
 
 
 here is an example how I build lapack on my workstation:

@@ -1,11 +1,11 @@
 package:
   name: pyneqsys
-  version: 0.4.1
+  version: 0.4.2
 
 source:
-  fn: pyneqsys-0.4.1.tar.gz
-  url: https://pypi.python.org/packages/source/p/pyneqsys/pyneqsys-0.4.1.tar.gz#md5=368f322adb3a59c17a2a2bf87fdcb905
-  md5: 368f322adb3a59c17a2a2bf87fdcb905
+  fn: pyneqsys-0.4.2.tar.gz
+  url: https://github.com/bjodah/pyneqsys/releases/download/v0.4.2/pyneqsys-0.4.2.tar.gz
+  md5: 1d04d5c488456c27fab1a0bb925c1d69
 
 build:
   number: 0
